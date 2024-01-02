@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Team Analyzer</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Pokemon Team Analyzer</h1>
+
+    <form id="pokemonForm">
+        <label for="pokemon1">Pokemon 1 Type:</label>
+        <input type="text" id="pokemon1" required>
+
+        <label for="pokemon2">Pokemon 2 Type:</label>
+        <input type="text" id="pokemon2" required>
+
+        <!-- Repeat the above lines for the other Pokemon -->
+
+        <button type="button" onclick="analyzeTeam()">Analyze Team</button>
+    </form>
+
+    <div id="results">
+        <!-- Display results here using JavaScript -->
+    </div>
+
+    <script>
+        // Add your JavaScript code here
+        function analyzeTeam() {
+            // Retrieve Pokemon types from input fields
+            const pokemon1Type = document.getElementById('pokemon1').value.toLowerCase();
+            const pokemon2Type = document.getElementById('pokemon2').value.toLowerCase();
+            // Repeat the above lines for the other Pokemon
+
+            // Perform type analysis logic here
+
+            // Display results
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `<p>Weaknesses: ...</p><p>Resistances: ...</p>`;
+        }
+    </script>
+</body>
+</html>

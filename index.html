@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Team Analyzer</title>
+    <title>PokeTeam - Pokemon Team Analyzer</title>
     <style>
         /* Add your CSS styles here */
     </style>
 </head>
 <body>
-    <h1>Pokemon Team Analyzer</h1>
+    <h1>PokeTeam - Pokemon Team Analyzer</h1>
 
     <form id="pokemonForm">
         <label for="pokemon1">Pokemon 1 Type:</label>
-        <input type="text" id="pokemon1" required>
+        <select id="pokemon1" required>
+            <!-- Add options for each Pokemon type -->
+            <option value="normal">Normal</option>
+            <option value="fire">Fire</option>
+            <!-- Add the rest of the Pokemon types -->
+        </select>
 
         <label for="pokemon2">Pokemon 2 Type:</label>
-        <input type="text" id="pokemon2" required>
+        <select id="pokemon2" required>
+            <!-- Add options for each Pokemon type -->
+            <option value="normal">Normal</option>
+            <option value="fire">Fire</option>
+            <!-- Add the rest of the Pokemon types -->
+        </select>
 
         <!-- Repeat the above lines for the other Pokemon -->
 
@@ -30,7 +40,7 @@
     <script>
         // Add your JavaScript code here
         function analyzeTeam() {
-            // Retrieve Pokemon types from input fields
+            // Retrieve Pokemon types from dropdown menus
             const pokemon1Type = document.getElementById('pokemon1').value.toLowerCase();
             const pokemon2Type = document.getElementById('pokemon2').value.toLowerCase();
             // Repeat the above lines for the other Pokemon

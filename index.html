@@ -12,13 +12,42 @@
     <h1>PokeTeam - Pokemon Team Analyzer</h1>
 
     <form id="pokemonForm">
-        <label for="pokemon1">Pokemon 1 Type:</label>
-        <select id="pokemon1" required></select>
-
-        <label for="pokemon2">Pokemon 2 Type:</label>
-        <select id="pokemon2" required></select>
-
-        <!-- Repeat the above lines for the other Pokemon -->
+        <div>
+            <label for="pokemon1Type1">Pokemon 1 Type 1:</label>
+            <select id="pokemon1Type1" required></select>
+            <label for="pokemon1Type2">Type 2:</label>
+            <select id="pokemon1Type2"></select>
+        </div>
+        <div>
+            <label for="pokemon2Type1">Pokemon 2 Type 1:</label>
+            <select id="pokemon2Type1" required></select>
+            <label for="pokemon2Type2">Type 2:</label>
+            <select id="pokemon2Type2"></select>
+        </div>
+        <div>
+            <label for="pokemon3Type1">Pokemon 3 Type 1:</label>
+            <select id="pokemon3Type1" required></select>
+            <label for="pokemon3Type2">Type 2:</label>
+            <select id="pokemon3Type2"></select>
+        </div>
+        <div>
+            <label for="pokemon4Type1">Pokemon 4 Type 1:</label>
+            <select id="pokemon4Type1" required></select>
+            <label for="pokemon4Type2">Type 2:</label>
+            <select id="pokemon4Type2"></select>
+        </div>
+        <div>
+            <label for="pokemon5Type1">Pokemon 5 Type 1:</label>
+            <select id="pokemon5Type1" required></select>
+            <label for="pokemon5Type2">Type 2:</label>
+            <select id="pokemon5Type2"></select>
+        </div>
+        <div>
+            <label for="pokemon6Type1">Pokemon 6 Type 1:</label>
+            <select id="pokemon6Type1" required></select>
+            <label for="pokemon6Type2">Type 2:</label>
+            <select id="pokemon6Type2"></select>
+        </div>
 
         <button type="button" onclick="analyzeTeam()">Analyze Team</button>
     </form>
@@ -48,9 +77,18 @@
 
         function analyzeTeam() {
             // Retrieve Pokemon types from dropdown menus
-            const pokemon1Type = document.getElementById('pokemon1').value.toLowerCase();
-            const pokemon2Type = document.getElementById('pokemon2').value.toLowerCase();
-            // Repeat the above lines for the other Pokemon
+            const pokemon1Type1 = document.getElementById('pokemon1Type1').value.toLowerCase();
+            const pokemon1Type2 = document.getElementById('pokemon1Type2').value.toLowerCase();
+            const pokemon2Type1 = document.getElementById('pokemon2Type1').value.toLowerCase();
+            const pokemon2Type2 = document.getElementById('pokemon2Type2').value.toLowerCase();
+            const pokemon3Type1 = document.getElementById('pokemon3Type1').value.toLowerCase();
+            const pokemon3Type2 = document.getElementById('pokemon3Type2').value.toLowerCase();
+            const pokemon4Type1 = document.getElementById('pokemon4Type1').value.toLowerCase();
+            const pokemon4Type2 = document.getElementById('pokemon4Type2').value.toLowerCase();
+            const pokemon5Type1 = document.getElementById('pokemon5Type1').value.toLowerCase();
+            const pokemon5Type2 = document.getElementById('pokemon5Type2').value.toLowerCase();
+            const pokemon6Type1 = document.getElementById('pokemon6Type1').value.toLowerCase();
+            const pokemon6Type2 = document.getElementById('pokemon6Type2').value.toLowerCase();
 
             // Perform type analysis logic here
 

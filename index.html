@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeTeam - Pokemon Team Analyzer</title>
-    <style>
-        /* Add your CSS styles here */
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>PokeTeam - Pokemon Team Analyzer</h1>
@@ -56,46 +54,6 @@
         <!-- Display results here using JavaScript -->
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('https://pokeapi.co/api/v2/type')
-                .then(response => response.json())
-                .then(data => {
-                    const types = data.results.map(type => type.name);
-                    const selects = document.querySelectorAll('select');
-                    selects.forEach(select => {
-                        types.forEach(type => {
-                            const option = document.createElement('option');
-                            option.value = type;
-                            option.textContent = type.charAt(0).toUpperCase() + type.slice(1);
-                            select.appendChild(option);
-                        });
-                    });
-                })
-                .catch(error => console.error('Error fetching Pokemon types:', error));
-        });
-
-        function analyzeTeam() {
-            // Retrieve Pokemon types from dropdown menus
-            const pokemon1Type1 = document.getElementById('pokemon1Type1').value.toLowerCase();
-            const pokemon1Type2 = document.getElementById('pokemon1Type2').value.toLowerCase();
-            const pokemon2Type1 = document.getElementById('pokemon2Type1').value.toLowerCase();
-            const pokemon2Type2 = document.getElementById('pokemon2Type2').value.toLowerCase();
-            const pokemon3Type1 = document.getElementById('pokemon3Type1').value.toLowerCase();
-            const pokemon3Type2 = document.getElementById('pokemon3Type2').value.toLowerCase();
-            const pokemon4Type1 = document.getElementById('pokemon4Type1').value.toLowerCase();
-            const pokemon4Type2 = document.getElementById('pokemon4Type2').value.toLowerCase();
-            const pokemon5Type1 = document.getElementById('pokemon5Type1').value.toLowerCase();
-            const pokemon5Type2 = document.getElementById('pokemon5Type2').value.toLowerCase();
-            const pokemon6Type1 = document.getElementById('pokemon6Type1').value.toLowerCase();
-            const pokemon6Type2 = document.getElementById('pokemon6Type2').value.toLowerCase();
-
-            // Perform type analysis logic here
-
-            // Display results
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `<p>Weaknesses: ...</p><p>Resistances: ...</p>`;
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
